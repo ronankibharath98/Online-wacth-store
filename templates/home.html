@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kala: The watch Collection</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    
+    <style>
+      .image-container {
+        width: 100%;
+        height: ; 300px;
+        position: relative;
+        display: inline-block;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0; /* Initially hidden */
+        transition: opacity 0.3s ease; /* Smooth transition */
+      }
+      .image-container:hover .overlay {
+        opacity: 1; /* Show overlay on hover */
+      }
+
+      .content {
+        text-align: center;
+        color: white;
+        padding: 20px;
+      }
+
+      .image-container h2{
+        font-size: 45px;
+        color: #dbd8d2;
+      }
+      
+      h1{
+        font-size:50px;
+        color: #708090;
+      }
+      .container h2{
+        color: #708090;
+        margin-top: 10px;
+        font-family: poppins; 
+      
+      }
+      #id{
+        display: block;
+        width:100%;
+        /* margin: 0 auto; */
+      }
+      p {
+        color: #000000;
+        /* text-align: center; */
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px,3fr));
+        grid-gap: 20px;
+      }
+
+      .grid-item {
+        width: 100%;
+        height: 200px; 
+        background-size: cover;
+        background-position: center;
+        border: 2px solid #ddd;
+        box-sizing: border-box;
+      }
+      .conetent{
+        flex: 1;
+        text-align: center;
+      }
+      
+
+    </style>
+  </head>
+  <body>
+    
+    <div class="container">
+      <nav class="navbar">
+        <div class="left">
+          <ul class="nav nav-underline">
+            <li class="nav-items">
+              <a class="nav-link active" aria-current="page" href="login.html">Login</a>
+            </li>
+            <li class="nav-items">
+              <a class="nav-link active" aria-current="page" href="signup.html">SignUp</a>
+            </li>
+            <li class="nav-items">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+          </ul>
+        </div>
+        <div class="right">
+          <ul class="nav nav-underline">
+            <li class="nav-items">
+              <a class="nav-link active" aria-current="page" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>  
+      </nav>
+        <h1>Kala: The watch Collection</h1>
+      <div class="image-container">
+        <img class="img-fluid" src="https://png.pngtree.com/thumb_back/fw800/background/20221108/pngtree-sale-and-hashtag-on-black-background-for-online-store-photo-image_40544210.jpg" id= "banner" style="height:300px; width:100%" >
+        <div class="overlay">
+          <div clas="content">
+            <h2>Ends soon...</h2>
+          </div>
+        </div>
+      </div>
+      
+      <h2>About Us</h2>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+      <h2>New Arraivals</h2>
+      <div class="grid-container">
+        <div class="grid-item" style="background-image:url('https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/13873104/2023/2/23/3d3e88b1-4364-4a1a-84ec-4a21adf9dd961677145439963SCUDERIAFERRARIMenBlueMultiFunctionWatch08307881.jpg');">
+          
+        </div>
+        <div class="grid-item" style="background-image:url('https://i.pinimg.com/736x/b7/e7/d8/b7e7d878d84bbeacb6c8c10cc428f574.jpg');">
+        </div>
+        <div class="grid-item" style="background-image:url('https://cdn4.ethoswatches.com/the-watch-guide/wp-content/uploads/2022/05/GP-Laureato-Absolute-Chronograph-AM-F1-Edition-Masthead-Mobile.jpg');">
+        </div>
+        <div class="grid-item" style="background-image:url('https://i.pinimg.com/originals/6a/5b/7c/6a5b7c2b825900b7a26041cb8d55ecd4.jpg');">
+          </div>
+        <div class="grid-item" style="background-image:url('https://i.pinimg.com/736x/35/19/28/35192804c9c4d4cc7d5b24c72e4a3b38.jpg');">
+          </div>
+      </div>  
+      <div style="text-align:center; margin-top:10px;">
+        <button class="btn btn-outline-primary">View more</button>
+      </div>
+      <h2>Trending</h2>
+      <div class="grid-container">
+        <div class="grid-item" style="background-image:url('https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/13873104/2023/2/23/3d3e88b1-4364-4a1a-84ec-4a21adf9dd961677145439963SCUDERIAFERRARIMenBlueMultiFunctionWatch08307881.jpg');">
+        </div>
+        <div class="grid-item" style="background-image:url('https://i.pinimg.com/736x/b7/e7/d8/b7e7d878d84bbeacb6c8c10cc428f574.jpg');">
+        </div>
+        <div class="grid-item" style="background-image:url('https://cdn4.ethoswatches.com/the-watch-guide/wp-content/uploads/2022/05/GP-Laureato-Absolute-Chronograph-AM-F1-Edition-Masthead-Mobile.jpg');">
+        </div>
+        <div class="grid-item" style="background-image:url('https://i.pinimg.com/originals/6a/5b/7c/6a5b7c2b825900b7a26041cb8d55ecd4.jpg');">
+          </div>
+        <div class="grid-item" style="background-image:url('https://i.pinimg.com/736x/35/19/28/35192804c9c4d4cc7d5b24c72e4a3b38.jpg');">
+          </div>
+      </div>
+      <div style="text-align:center; margin-top:10px;">
+        <button class="btn btn-outline-primary">View more</button>
+      </div>
+      <h2>Sales</h2>
+      <div class="grid-container">
+        <div class="grid-item" style="background-image:url('https://static.vecteezy.com/system/resources/thumbnails/010/994/248/small/puma-logo-white-symbol-clothes-design-icon-abstract-football-illustration-with-black-background-free-vector.jpg');">
+        </div>
+        <div class="grid-item" style="background-image:url('https://www.muraldecal.com/en/img/asfs360-jpg/folder/products-listado-merchant/stickers-nike-logo.jpg);">
+        </div>
+        <div class="grid-item" style="background-image:url('https://i.pinimg.com/originals/32/1e/dd/321edd1032f03ec70d896ecad98961e1.jpg');">
+        </div>
+        <div class="grid-item" style="background-image:url('https://images.squarespace-cdn.com/content/v1/58610afd29687f7c771f55ec/1597899678514-CLVJ8FEE241JDQII35DP/Seiko+Five.png');">
+          </div>
+        <div class="grid-item" style="background-image:url('https://t4.ftcdn.net/jpg/03/08/91/13/360_F_308911374_fGRIDIPYXi2UAn14huC25LcFgQIFoCjJ.jpg');">
+          </div>
+      </div>
+      <div style="text-align:center; margin-top:10px; margin-bottom:10px;">
+        <button class="btn btn-outline-primary">View more</button>
+      </div>
+      <div style="text-align:center;">
+        <b>Location</b>
+        <p>{{contact}}</p>
+      </div>
+    </div>
+  </body>
+</html>
