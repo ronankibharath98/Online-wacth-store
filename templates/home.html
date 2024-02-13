@@ -87,29 +87,8 @@
   <body>
     
     <div class="container">
-      <nav class="navbar">
-        <div class="left">
-          <ul class="nav nav-underline">
-            <li class="nav-items">
-              <a class="nav-link active" aria-current="page" href="login.html">Login</a>
-            </li>
-            <li class="nav-items">
-              <a class="nav-link active" aria-current="page" href="signup.html">SignUp</a>
-            </li>
-            <li class="nav-items">
-              <a class="nav-link active" aria-current="page" href="home.html">Home</a>
-            </li>
-          </ul>
-        </div>
-        <div class="right">
-          <ul class="nav nav-underline">
-            <li class="nav-items">
-              <a class="nav-link active" aria-current="page" href="#">Contact Us</a>
-            </li>
-          </ul>
-        </div>  
-      </nav>
-        <h1>Kala: The watch Collection</h1>
+      {% include 'nav.html' %}
+      <h1>Kala: The watch Collection</h1>
       <div class="image-container">
         <img class="img-fluid" src="https://png.pngtree.com/thumb_back/fw800/background/20221108/pngtree-sale-and-hashtag-on-black-background-for-online-store-photo-image_40544210.jpg" id= "banner" style="height:300px; width:100%" >
         <div class="overlay">
@@ -176,5 +155,6 @@
         <p>{{contact}}</p>
       </div>
     </div>
+    {%include 'footer.html'%}
   </body>
 </html>
