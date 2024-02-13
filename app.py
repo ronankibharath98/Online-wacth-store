@@ -10,7 +10,12 @@ def hello():
   return render_template("home.html", contact=address)
 
 
-@app.route("/login")
+@app.route("/home.html")
+def home():
+  return render_template("home.html", contact=address)
+
+
+@app.route("/login.html")
 def login():
   return render_template("login.html")
 
