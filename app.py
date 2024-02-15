@@ -1,13 +1,17 @@
 from flask import Flask, render_template
 
+from database import load_products_from_db
+
 app = Flask(__name__)
 
 address = "98 lovell street, worcester, MA 01609"
 
 
+
 @app.route("/")
 def hello():
-  return render_template("home.html", contact=address)
+  products = load_products_from_db()
+  return render_template("home.html", products=products, contact=address)
 
 
 @app.route("/home.html")
