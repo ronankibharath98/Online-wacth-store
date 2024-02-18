@@ -1,2 +1,2 @@
-# job-career-website
-A career website 
+# kala: watch station
+A online watch store
