@@ -7,7 +7,6 @@ app = Flask(__name__)
 address = "98 lovell street, worcester, MA 01609"
 
 
-
 @app.route("/")
 def hello():
   products = load_products_from_db()
@@ -27,6 +26,11 @@ def login():
 @app.route("/signup.html")
 def signup():
   return render_template("signup.html")
+
+
+@app.route("/products.html")
+def products():
+  return render_template("products.html")
 
 
 if __name__ == "__main__":

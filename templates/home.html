@@ -116,7 +116,15 @@
           </div>
       </div>  
       <div style="text-align:center; margin-top:10px;">
-        <button class="btn btn-outline-primary">View more</button>
+        <button class="btn btn-outline-primary" onclick="redirectViewMore()">View more</button>
+        <script>
+          function redirectViewMore() {
+              // Specify the relative path to the HTML file to redirect to
+              var url = "products.html";
+              // Redirect to the specified URL
+              window.location.href = url;
+          }
+        </script>
       </div>
       <h2>Sale</h2>
       <div class="grid-container">
