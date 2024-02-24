@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine, text
 
-db_connection_string = "mysql+pymysql://0lyxmh4bkvsa87glaeqp:pscale_pw_lCHSp51jXbMON4rvTxmwm7G9pNAu6fPhOw87sDveBXB@aws.connect.psdb.cloud/kalaonlinestore?charset=utf8mb4"
+db_connection_string = "mysql+pymysql://m9ladr9mjugsqtgppriq:pscale_pw_32mBcKfq6HB2jzJilBNOOP0XM3Q9O6EbNGDHai6aABd@aws.connect.psdb.cloud/kalaonlinestore?charset=utf8mb4"
 
 engine = create_engine(db_connection_string,
                        connect_args={"ssl": {
