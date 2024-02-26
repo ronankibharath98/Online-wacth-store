@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact Us</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+<style>
+  body {
+    font-family: poppin;
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Make the body a flex container */
+    flex-direction: column; /* Arrange children vertically */
+    min-height: 100vh; /* Set minimum height to 100% of viewport height */
+  }
+
+  .container {
+    flex: 1; /* Make the container grow to fill available space */
+    display: flex; /* Use flexbox for children positioning */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 0 auto; /* Center horizontally */
+  }
+
+  .subtext {
+    padding-top: 10px;
+    padding-right: 20px; /* Adjust spacing */
+    max-width: 400px; /* Limit maximum width */
+  }
+
+  .subtext p {
+    font-size: 16px;
+    color: #555;
+  }
+
+  .form-container {
+    padding-top:10px;
+    width: 900px;
+    margin-right: 20px; /* Adjust the margin to position the form on the right side */
+    border-radius: 20px;
+  }
+
+  form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #F5F3F3;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%; /* Adjust the width of the inputs */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+  }
+
+  .name-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .fname-container,
+  .lname-container {
+    width: calc(50% - 5px); /* Adjust the width of the containers */
+  }
+
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+  .footer {
+    margin-top: auto; /* Push the footer to the bottom */
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .navbar {
+    width: 100%; /* Ensure the navbar spans the full width */
+  }
+
+</style>
+</head>
+
+<body>
+    <div class="container">
+      <div class="navbar">
+        {% include 'nav.html' %}
+      </div>
+        <div class="subtext">
+        <h1 style="padding-top:10px; color:#708090">Contact us</h1>
+        <p>Want to get in touch with us? Fill out th form below and we will get bak to you as soon as possible.</p>
+      </div>
+      <div class="form-container">
+        <h1 style="padding-top:10px; color:#708090">Want to contact us?</h1>
+        
+        <form action="#">
+          <div class="form-group">
+            <div class="name-container">
+              <div class="fname-container">
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname" required>
+              </div>
+              <div class="lname-container">
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname" required>
+              </div>
+            </div>
+          </div>
+            <div class="form-group">
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="issue">Issue:</label>
+            <textarea id="issue" name="issue" required></textarea>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="footer">
+        {%include 'footer.html'%}
+      </div>
+    </div>
+
+</body>
+</html>
