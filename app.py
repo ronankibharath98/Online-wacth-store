@@ -1,26 +1,30 @@
 from flask import Flask, render_template, request, redirect, url_for
-from mongodb import *
-# from database import load_products_from_db
+from mongodb import collection
 
 app = Flask(__name__)
 
 address = "98 lovell street, worcester, MA 01609"
 
-# @app.route("/")
-# def hello():
-#   products = load_products_from_db()
-#   return render_template("home.html", products=products, contact=address)
-
-
 @app.route("/home.html")
 def home():
   return render_template("home.html", contact=address)
-
-
-@app.route("/login.html")
+  
+@app.route("/login.html", methods=['GET', 'POST'])
 def login():
-  return render_template("login.html")
+  if request.method == 'POST':
+    username = request.form['username']
+    password = request.form['password']
 
+    login_user = collection.find_one({
+        "username": username,
+        "password": password
+    })
+    if login_user:
+      return redirect(url_for('home'))
+    else:
+      return render_template("login.html",
+                             message="Invalid username or password")
+  return render_template('login.html')
 
 @app.route('/signup.html', methods=['GET', 'POST'])
 def signup():
@@ -36,9 +40,7 @@ def signup():
             "email": email
         }]})
     if existing_user:
-      return render_template(
-          'login.html')  # Assuming you have a login.html template
-
+      return render_template('login.html')
     # Proceed with sign-up process if user doesn't exist
     password = request.form['password']
     # Insert user data into the database
