@@ -119,6 +119,9 @@
         </div>
         <button type="submit" class="btn">Log in</button>
       </form>
+      {%if message%}
+      <p style="color:red;">{{message}}</p>
+      {%endif%}
       <p>Do not have an account? <a href="signup.html">Sign up</a></p>
     </div>
   </div>

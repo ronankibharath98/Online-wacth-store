@@ -3,12 +3,11 @@ from mongodb import collection
 
 app = Flask(__name__)
 
-address = "98 lovell street, worcester, MA 01609"
+@app.route('/')
+def index():
+    # Render the template for your landing page
+    return render_template('signup.html')
 
-@app.route("/home.html")
-def home():
-  return render_template("home.html", contact=address)
-  
 @app.route("/login.html", methods=['GET', 'POST'])
 def login():
   if request.method == 'POST':
@@ -20,11 +19,19 @@ def login():
         "password": password
     })
     if login_user:
-      return redirect(url_for('home'))
+      return redirect(url_for('home', username=username))
     else:
       return render_template("login.html",
                              message="Invalid username or password")
   return render_template('login.html')
+
+
+@app.route("/home.html")
+def home():
+  # Retrieve username from query parameter
+  username = request.args.get('username')
+  return render_template("home.html", username=username)
+
 
 @app.route('/signup.html', methods=['GET', 'POST'])
 def signup():
